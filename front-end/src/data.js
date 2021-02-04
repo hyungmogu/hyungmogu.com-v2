@@ -1,14 +1,53 @@
 export const data = {
-    "resume": "https://github.com/hyungmogu/personal-dev-log/files/5577846/Hyungmo.Gu.pdf",
+    "contact": {
+        "web": {
+            "label": "hyungmogu.com",
+            "url": "https://www.hyungmogu.com"
+        },
+        "linkedIn": {
+            "label": "/in/hyungmo-gu/",
+            "url": "https://www.linkedin.com/in/hyungmo-gu/"
+        },
+        "github": {
+            "label": "github.com/hyungmogu",
+            "url": "https://github.com/hyungmogu/"
+        },
+        "email":"guhyungm7@gmail.com",
+        "tel": "1-825-365-1143"
+    },
+    "resume": "https://github.com/hyungmogu/portfolio-website-v2/files/5826497/Hyungmo.Gu.pdf",
     "works": [
         {
             "id": 1,
+            "title": "hyungmogu.com",
+            "date": "February 3rd, 2021",
+            "headerImage": "https://user-images.githubusercontent.com/72232928/99110490-cd056a00-262d-11eb-99b8-e9284e79b39b.png",
+            "shortDescription": "Portfolio site housing works of Hyungmo's software development",
+            "demoURL": "https://https://hyungmogu.com/",
+            "sourceURL": "https://github.com/hyungmogu/hyungmogu.com-v2",
+            "techUsed": [
+                {
+                    "name": "Frontend",
+                    "items": ["SASS", "HTML5", "Styled Components", "ReactJS"]
+                }
+            ],
+            "images": [
+                "https://user-images.githubusercontent.com/6856382/106803602-b8be8f80-66a7-11eb-86a6-9cb80a2ab675.png",
+                "https://user-images.githubusercontent.com/6856382/106806560-75662000-66ab-11eb-8a2a-884bbfae88a9.png",
+                "https://user-images.githubusercontent.com/6856382/106806987-f45b5880-66ab-11eb-9f3f-a8ff62627c5a.png",
+                "https://user-images.githubusercontent.com/6856382/106807380-6b90ec80-66ac-11eb-89ab-3595c68a97f5.png",
+                "https://user-images.githubusercontent.com/6856382/106802426-4c8f5c00-66a6-11eb-955f-3f9e20dbe619.png",
+                "https://user-images.githubusercontent.com/6856382/106809199-b9a6ef80-66ae-11eb-8d82-5e79f4ef720b.png",
+            ]
+        },
+        {
+            "id": 2,
             "title": "Photo Application",
             "date": "January 8th, 2020",
             "headerImage": "https://user-images.githubusercontent.com/72232928/99029105-f46c2080-25b4-11eb-88fe-a6471bf07721.png",
             "shortDescription": "Basic photo and photo gallery app built using React Native",
             "demoURL": "https://expo.io/@guhyungm7/basic-photo-app",
-            "sourceURL": "https://github.com/hyungmogu/basic-photo-app#",
+            "sourceURL": "https://github.com/hyungmogu/basic-photo-app",
             "techUsed": [
                 {
                     "name": "Frontend",
@@ -24,7 +63,7 @@ export const data = {
             ]
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "Calculator",
             "date": "January 5th, 2020",
             "headerImage": "https://user-images.githubusercontent.com/72232928/99099040-329d2a80-261d-11eb-8488-f5d9537c9e92.png",
@@ -34,44 +73,13 @@ export const data = {
             "techUsed": [
                 {
                     "name": "Frontend",
-                    "items": ["SCSS", "React.js"]
+                    "items": ["SASS", "ReactJS"]
                 }
             ],
             "images": [
                 "https://user-images.githubusercontent.com/72232928/99097699-552e4400-261b-11eb-91aa-2106219c8885.png",
                 "https://user-images.githubusercontent.com/72232928/99097707-565f7100-261b-11eb-9824-08436888305c.png",
                 "https://user-images.githubusercontent.com/72232928/99097710-56f80780-261b-11eb-9be2-96674842a62f.png"
-            ]
-        },
-        {
-            "id": 3,
-            "title": "hyungmogu.com",
-            "date": "December 9th, 2019",
-            "headerImage": "https://user-images.githubusercontent.com/72232928/99110490-cd056a00-262d-11eb-99b8-e9284e79b39b.png",
-            "shortDescription": "Portfolio site housing works of Hyungmo's software development",
-            "demoURL": "https://https://hyungmogu.com/",
-            "sourceURL": "#",
-            "techUsed": [
-                {
-                    "name": "Frontend",
-                    "items": ["SCSS", "HTML5"]
-                },
-                {
-                    "name": "Backend",
-                    "items": ["Django"]
-                },
-                {
-                    "name": "Database",
-                    "items": ["SQLite3"]
-                }
-            ],
-            "images": [
-                "https://user-images.githubusercontent.com/72232928/99109955-f83b8980-262c-11eb-947c-8585d392bf8d.png",
-                "https://user-images.githubusercontent.com/72232928/99109978-02f61e80-262d-11eb-8fbd-68eacd1eb6b6.png",
-                "https://user-images.githubusercontent.com/72232928/99109980-04274b80-262d-11eb-9da4-090cc85f4d46.png",
-                "https://user-images.githubusercontent.com/72232928/99109982-04bfe200-262d-11eb-8015-7a716116b56e.png",
-                "https://user-images.githubusercontent.com/72232928/99109994-07bad280-262d-11eb-8511-61ccc5f5e1f4.png",
-                "https://user-images.githubusercontent.com/72232928/99109996-09849600-262d-11eb-8f80-e0a889bc0c7e.png"
             ]
         },
         {
@@ -128,6 +136,26 @@ export const data = {
             ],
             "images": [
                 "https://user-images.githubusercontent.com/72232928/99126628-e3b9ba00-2649-11eb-8249-30077fe3f16a.png"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Web App Dashboard",
+            "date": "January 15th, 2018",
+            "headerImage": "https://user-images.githubusercontent.com/6856382/99919153-08571580-2d5f-11eb-87d7-8898c8562b13.png",
+            "shortDescription": "9th project for Treehouse's Front-End Tech Degree.",
+            "demoURL": "https://hyungmogu.github.io/web-app-dashboard/",
+            "sourceURL": "https://github.com/hyungmogu/web-app-dashboard",
+            "techUsed": [
+                {
+                    "name": "Frontend",
+                    "items": ["HTML5","CSS3","SASS","Gulp.js","Chart.js"]
+                }
+            ],
+            "images": [
+                "https://user-images.githubusercontent.com/6856382/99920909-11011900-2d6a-11eb-970e-5ba65efee036.png",
+                "https://user-images.githubusercontent.com/6856382/99920910-1199af80-2d6a-11eb-803c-ce2a3518bb5c.png",
+                "https://user-images.githubusercontent.com/6856382/99920907-0e9ebf00-2d6a-11eb-9d05-7041163ce1b1.png"
             ]
         }
     ]

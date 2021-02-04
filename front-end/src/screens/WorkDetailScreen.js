@@ -5,9 +5,9 @@ class WorkDetailScreen extends Component {
 
     getWork = (id, works) => {
 
-        let res = works.find(element => element.id == id);
+        let res = works.find(element => element.id === id);
 
-        if (res == -1) {
+        if (res === -1) {
             console.error("getWork: element not found");
         }
 
@@ -15,12 +15,10 @@ class WorkDetailScreen extends Component {
     }
 
     render() {
-        let id = this.props.match.params.id;
-        let work = this.getWork(this.props.match.params.id, this.props.appContext.data.works);
-        console.log(work);
+        let work = this.getWork(parseInt(this.props.match.params.id), this.props.appContext.data.works);
 
         return (
-            <section className="content -contentworks_detail">
+            <section className="content contentworks_detail">
                 <header class="header--secondary p-6">
                     <h2>Works</h2>
                 </header>
@@ -34,7 +32,7 @@ class WorkDetailScreen extends Component {
                             {work.date}
                         </p>
                         <div>
-                            {work.demoURL != "#" && <a href={work.demoURL} class="btn btn--primary small">See Demo</a>}
+                            {work.demoURL !== "#" && <a href={work.demoURL} class="btn btn--primary small">See Demo</a>}
                             <a href={work.sourceURL} class="btn btn--primary-outline small">Source Code</a>
                         </div>
                     </div>
@@ -58,15 +56,15 @@ class WorkDetailScreen extends Component {
 
                         <section class="images text-center mb-8">
                             {
-                                work.images.map(imageURL => {
-                                    return <img src={imageURL} class="img-fluid mb-3" alt="Responsive image" />
+                                work.images.map((imageURL, index) => {
+                                    return <img src={imageURL} class="img-fluid mb-3" alt={"Responsive image " + index} />
                                 })
                             }
                         </section>
 
                         <section class="text-center mb-8">
                             <div>
-                            {work.demoURL != "#" && <a href={work.demoURL} class="btn btn--primary small">See Demo</a>}
+                            {work.demoURL !== "#" && <a href={work.demoURL} class="btn btn--primary small">See Demo</a>}
                                 <a href={work.sourceURL} class="btn btn--primary-outline small">Source Code</a>
                             </div>
                         </section>

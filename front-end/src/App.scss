@@ -52,6 +52,7 @@ main {
 
     .content {
         width: 100vw;
+        margin-top: 4.0rem;
     }
 
     .header--primary-desktop {
@@ -67,6 +68,7 @@ main {
         overflow-y: hidden;
         .content {
             width: calc(100vw - #{$width-header--primary-desktop});
+            margin-top: 0;
         }
 
         .header--primary-desktop {
@@ -257,6 +259,9 @@ main {
     background-color: white;
     height: #{$height-header--mobile};
     padding: #{$padding-header--mobile};
+    box-shadow: 0px 2px 5px grey;
+    position: fixed;
+    width: 100%;
     nav {
         display: flex;
         justify-content: space-between;
@@ -272,6 +277,8 @@ main {
 
 .header--primary-desktop {
     background-color: white;
+    box-shadow: 2px 0px 5px grey;
+    z-index: 2;
     padding-top: calc(#{$height-header--mobile} + #{$padding-header--mobile}*2);
     .logo {
         margin-top: 3rem;
@@ -380,7 +387,7 @@ main {
 .screen-overlay {
     display: none;
     background-color: black;
-    opacity: 50%;
+    opacity: 0.5;
     position: fixed;
     top: 0;
     left: 0;
