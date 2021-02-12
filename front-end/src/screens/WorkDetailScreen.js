@@ -15,7 +15,7 @@ class WorkDetailScreen extends Component {
     }
 
     render() {
-        let work = this.getWork(parseInt(this.props.match.params.id), this.props.appContext.data.works);
+        let work = this.getWork(parseInt(this.props.match.params.id), this.props.appContext.data.resume.projectExp);
 
         return (
             <section className="content contentworks_detail">
@@ -53,6 +53,22 @@ class WorkDetailScreen extends Component {
                                 }
                             </ul>
                         </section>
+                        {
+                            work.highlights && work.highlights.length > 0 && (
+                                <section class="mb-8 mt-8">
+                                    <h3>Highlights</h3>
+                                    <ul>
+                                        {
+                                            work.highlights.map(highlight => {
+                                                return (
+                                                    <li>{highlight}</li>
+                                                );
+                                            })
+                                        }
+                                    </ul>
+                                </section>
+                            )
+                        }
 
                         <section class="images text-center mb-8">
                             {

@@ -45,7 +45,6 @@ class App extends Component {
         let screenOverlay = this.state.toggled ? "screen-overlay opened" : "screen-overlay";
         return (
             <AppProvider value={{state: this.state, data: data, handlers: this.handlers}}>
-                {/* <BrowserRouter basename={"portfolio-site"}> */}
                 <HashRouter>
                     <div className="App">
                         <SecondaryHeader/>

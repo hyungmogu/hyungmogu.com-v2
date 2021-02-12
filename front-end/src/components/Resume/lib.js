@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { data } from './data';
-
 
 const Article = styled.article`
   margin-bottom: 1em;
@@ -65,15 +63,15 @@ export function ProjectExpItem(props) {
     <Article>
       <Header>
         <Div>
-          <H3>{props.name}</H3>
-          <a href={props.url}>{props.url}</a>
+          <H3>{props.title}</H3>
+          <a href={props.sourceURL}>{props.sourceURL}</a>
         </Div>
         <Div>
             <P>{props.date}</P>
         </Div>
       </Header>
       <Ul>
-        {props.details.map(detail => <li>{detail}</li>)}
+        {props.highlights.map(detail => <li>{detail}</li>)}
       </Ul>
     </Article>
   );
@@ -92,7 +90,7 @@ export function WorkExpItem(props) {
         </Div>
       </Header>
       <Ul>
-        {props.details.map(detail => <li>{detail}</li>)}
+        {props.highlights.map(highlight => <li>{highlight}</li>)}
       </Ul>
     </Article>
   );
@@ -133,10 +131,10 @@ export function ResumeHeader(props) {
       <H1>Hyungmo (Moe) Gu</H1>
       <P>Calgary, AB, Canada</P>
       <Ul>
-        <Li>Web: <a href={data.info.web.url}>{data.info.web.label}</a></Li>
-        <Li>LinkedIn: <a href={data.info.linkedIn.url}>{data.info.linkedIn.label}</a></Li>
-        <Li><a href={'mailto:' + data.info.email}>{data.info.email}</a></Li>
-        <Li>T: {data.info.tel}</Li>
+        <Li>Web: <a href={props.web.url}>{props.web.label}</a></Li>
+        <Li>LinkedIn: <a href={props.linkedIn.url}>{props.linkedIn.label}</a></Li>
+        <Li><a href={'mailto:' + props.email}>{props.email}</a></Li>
+        <Li>T: {props.tel}</Li>
       </Ul>
       <Hr></Hr>
     </Header>

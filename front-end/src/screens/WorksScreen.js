@@ -8,7 +8,7 @@ class WorksScreen extends Component {
 
     render() {
 
-        let works = this.props.appContext.data.works;
+        let works = this.props.appContext.data.resume.projectExp;
 
         return (
             <section className="content content-works">

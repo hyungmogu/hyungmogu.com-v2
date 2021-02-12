@@ -7,14 +7,15 @@ import { PrintButton } from '../components/Buttons';
 
 class ResumeScreen extends Component {
     render() {
-        let resume = this.props.appContext.data.resume;
+        const data = this.props.appContext.data;
+        const pdfURL = this.props.appContext.data.resume.pdfURL;
         return (
             <section className="content content-resume">
                 <header class="header--secondary p-6">
                     <h2>Resume</h2>
                 </header>
-                <Resume/>
-                <PrintButton href={resume}/>
+                <Resume data={data}/>
+                <PrintButton href={pdfURL}/>
             </section>
         );
     }
