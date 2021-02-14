@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import { AppConsumer } from '../components/Context';
-import Resume from '../components/Resume';
-import { PrintButton } from '../components/Buttons';
+import { AppConsumer } from '../../components/Context';
+import Resume from '../../components/Resume';
+import { PrintButton } from '../../components/Buttons';
+import { Screen } from '../lib';
 
 
 class ResumeScreen extends Component {
@@ -10,13 +11,10 @@ class ResumeScreen extends Component {
         const data = this.props.appContext.data;
         const pdfURL = this.props.appContext.data.resume.pdfURL;
         return (
-            <section className="content content-resume">
-                <header class="header--secondary p-6">
-                    <h2>Resume</h2>
-                </header>
+            <Screen title={"Resume"}>
                 <Resume data={data}/>
                 <PrintButton href={pdfURL}/>
-            </section>
+            </Screen>
         );
     }
 }

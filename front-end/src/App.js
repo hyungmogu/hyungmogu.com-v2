@@ -1,17 +1,13 @@
+import './App.scss';
 import React, {Component} from 'react';
+import styled from 'styled-components';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import {
-  HashRouter,
-  Route,
-  Switch
-} from 'react-router-dom';
-
-import { AppProvider } from './components/Context';
-
-import PrimaryHeader from './components/PrimaryHeader';
-import SecondaryHeader from './components/SecondaryHeader';
-import PrimaryHeaderMobile from './components/PrimaryHeaderMobile';
-
+    PrimaryHeader,
+    SecondaryHeader,
+    PrimaryHeaderMobile
+} from './components/Navigation'
 import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
 import WorksScreen from './screens/WorksScreen';
@@ -19,15 +15,13 @@ import WorkDetailScreen from './screens/WorkDetailScreen';
 import ContactScreen from './screens/ContactScreen';
 import ResumeScreen from './screens/ResumeScreen';
 
-import './App.scss';
+import { AppProvider } from './components/Context';
 import { data } from './data.js';
 
 class App extends Component {
-
     state = {
         toggled: false,
     };
-
 
     handleToggleMenu = () => {
         this.setState(prev => {
@@ -42,13 +36,37 @@ class App extends Component {
     }
 
     render() {
-        let screenOverlay = this.state.toggled ? "screen-overlay opened" : "screen-overlay";
+        const ScreenOverlayDiv = styled.div`
+            display: ${this.state.toggled ? "initial" : "none"};
+            background-color: black;
+            opacity: 0.5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+
+            @media screen and (min-width: 930px) {
+                display: none;
+            }
+        `;
+
+        const Main = styled.main`
+            display: flex;
+
+            @media screen and (min-width: 930px) {
+                height: 100vh;
+                overflow-y: hidden;
+            }
+        `;
+
         return (
             <AppProvider value={{state: this.state, data: data, handlers: this.handlers}}>
                 <HashRouter>
                     <div className="App">
                         <SecondaryHeader/>
-                        <main role="main">
+                        <Main role="main">
                             <PrimaryHeader/>
                             <PrimaryHeaderMobile/>
                             <Switch>
@@ -59,8 +77,8 @@ class App extends Component {
                                 <Route path="/resume" component={ResumeScreen}/>
                                 <Route exact path="/" component={HomeScreen}/>
                             </Switch>
-                        </main>
-                        <div onClick={this.handleToggleMenu} className={screenOverlay}></div>
+                        </Main>
+                        <ScreenOverlayDiv onClick={this.handleToggleMenu}></ScreenOverlayDiv>
                     </div>
                 </HashRouter>
             </AppProvider>

@@ -75,7 +75,7 @@ export const data = {
                 "techUsed": [
                     {
                         "name": "Frontend",
-                        "items": ["SASS", "HTML5", "Styled Components", "ReactJS"]
+                        "items": ["SASS", "HTML5", "ES6 JavaScript", "ReactJS", "Styled Components"]
                     }
                 ],
                 "highlights": [
@@ -119,7 +119,7 @@ export const data = {
                 "includeInResume": false
             },
             {
-                "id": 3,
+                "id": 4,
                 "title": "Calculator",
                 "date": "January 5th, 2020",
                 "headerImage": "https://user-images.githubusercontent.com/72232928/99099040-329d2a80-261d-11eb-8488-f5d9537c9e92.png",
@@ -141,7 +141,7 @@ export const data = {
                 "includeInResume": false
             },
             {
-                "id": 4,
+                "id": 5,
                 "title": "Social Team Builder",
                 "date": "August 11th, 2019",
                 "headerImage": "https://user-images.githubusercontent.com/72232928/99116920-2ffbfe80-2638-11eb-8ac6-e6e66b362954.png",
@@ -178,7 +178,7 @@ export const data = {
                 "includeInResume": false
             },
             {
-                "id": 5,
+                "id": 6,
                 "title": "Work Log With a Database",
                 "date": "June 2nd, 2019",
                 "headerImage": "https://user-images.githubusercontent.com/72232928/99126946-7e19fd80-264a-11eb-88ec-242d8897f052.png",
@@ -206,7 +206,7 @@ export const data = {
                 "includeInResume": false
             },
             {
-                "id": 6,
+                "id": 7,
                 "title": "Web App Dashboard",
                 "date": "January 15th, 2018",
                 "headerImage": "https://user-images.githubusercontent.com/6856382/99919153-08571580-2d5f-11eb-87d7-8898c8562b13.png",

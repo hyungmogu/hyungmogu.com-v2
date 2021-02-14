@@ -7,7 +7,6 @@ function Resume(props) {
   const Main = styled.section`
     font-family: Arial, Helvetica, sans-serif;
     max-width: 700px;
-    margin: 0 1em 2em 1em;
     padding: 3em 3em;
     background: white;
 
