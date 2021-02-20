@@ -80,6 +80,7 @@ class App extends Component {
                         </Main>
                         <ScreenOverlayDiv onClick={this.handleToggleMenu}></ScreenOverlayDiv>
                     </div>
+                    <div id="portals"></div>
                 </HashRouter>
             </AppProvider>
         );
